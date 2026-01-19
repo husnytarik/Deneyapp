@@ -2,13 +2,27 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <title>Deney Ekle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deney Yönetimi</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Deney Girişi</h1>
+    <h1>Deney Yönetimi</h1>
+
+    <div class="experiments-section">
+      <h3>Mevcut Deneyler</h3>
+      <div id="experimentsList" class="compact-list">
+        <p style="color: #666; font-size: 0.8rem; padding: 10px">
+          Deneyler yükleniyor...
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
 
     <form id="experimentForm">
+      <h3 id="formTitle">Yeni Deney Ekle</h3>
+
       <input id="deneyAdi" placeholder="Deneyin Adı" required />
       <input id="deneyId" placeholder="Deney ID" />
 
@@ -21,7 +35,7 @@
       <textarea id="amac" placeholder="Amaç"></textarea>
       <textarea id="kazanim" placeholder="Kazanım"></textarea>
 
-      <label>Süre</label>
+      <label>Süre (Dakika)</label>
       <input id="sure" type="number" min="1" />
 
       <label>Zorluk</label>
@@ -52,7 +66,6 @@
         id="tartismaSorulari"
         placeholder="Tartışma Soruları"
       ></textarea>
-
       <textarea
         id="gunlukHayatlaBaglantisi"
         placeholder="Günlük Hayatla Bağlantısı"
@@ -61,7 +74,12 @@
       <input id="gorsel" placeholder="Görsel URL" />
       <input id="video" placeholder="Video URL" />
 
-      <button type="submit">Kaydet</button>
+      <div class="button-group">
+        <button type="submit" id="submitBtn">Kaydet</button>
+        <button type="button" id="deleteBtn" style="display: none">
+          Deneyi Sil
+        </button>
+      </div>
     </form>
 
     <script type="module" src="js/category-selector.js"></script>

@@ -1,4 +1,4 @@
-/* ABSOLUTE NEUTRAL ANTHRACITE - OPTIMIZED WIDTH */
+/* NEUTRAL ANTHRACITE THEME */
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -6,154 +6,162 @@
 
 body {
   margin: 0;
-  padding: 10px; /* Mobilde kenar boşlukları azaltıldı */
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
-  background-color: #121212;
+  padding: 15px;
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #000000;
   color: #e2e8f0;
   line-height: 1.4;
 }
 
 h1 {
   font-size: 1.2rem;
-  font-weight: 700;
   text-align: center;
-  margin: 1rem 0;
-  color: #ffffff;
+  color: #fff;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
-/* FORM CONTAINER - GENİŞLİK AYARI */
+/* TAB / LIST AREA */
+.experiments-section {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.experiment-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.experiment-item-card span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #222;
+  margin: 30px 0;
+}
+
+/* FORM STRUCTURE */
 form {
-  width: 100%; /* Mobilde tam genişlik */
-  max-width: 800px; /* Masaüstünde çok dar kalmaması için artırıldı */
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* NEUTRAL INPUTS */
 label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-top: 5px;
-  color: #888888;
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: -8px;
+  font-weight: bold;
 }
 
 input,
 textarea,
 select {
   width: 100%;
-  padding: 10px 12px; /* Daha rahat dokunuş için hafif artırıldı */
-  border-radius: 6px;
-  border: 1px solid #333333;
-  background: #1e1e1e;
+  padding: 10px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 4px;
+  color: #fff;
   font-size: 0.9rem;
-  color: #ffffff;
-  transition: border-color 0.2s;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #ffffff;
+  border-color: #555;
 }
 
-textarea {
-  min-height: 80px;
-}
-
-select[multiple] {
-  min-height: 120px;
-}
-
-/* MATERIALS SECTION */
-.material-item {
-  background: #1a1a1a;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #333333;
-}
-
-.material-name {
-  font-weight: 600;
-  border: none;
-  border-bottom: 1px solid #333333;
-  border-radius: 0;
-  padding: 4px 0;
-  margin-bottom: 8px;
-  background: transparent;
-}
-
-.alternatives {
-  margin-left: 8px;
-  padding-left: 12px;
-  border-left: 1px solid #333333;
-}
-
-.alternative-item {
-  display: flex;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-/* BUTTONS - MONOCHROME */
+/* BUTTONS */
 button {
-  font-family: inherit;
+  padding: 10px;
+  border-radius: 4px;
   font-weight: 600;
-  border-radius: 6px;
   cursor: pointer;
   border: none;
+  transition: 0.2s;
 }
 
-button[type="submit"] {
-  background: #ffffff;
-  color: #000000;
-  padding: 14px;
+#submitBtn {
+  background: #fff;
+  color: #000;
   font-size: 1rem;
-  margin-top: 15px;
-  width: 100%;
+}
+
+#deleteBtn {
+  background: #1a1a1a;
+  color: #888;
+  border: 1px solid #333;
+}
+
+#deleteBtn:hover {
+  background: #800; /* Çok hafif bir kırmızı uyarısı */
+  color: #fff;
 }
 
 #addMaterialBtn {
   background: transparent;
-  color: #ffffff;
-  padding: 10px;
-  border: 1px dashed #444444;
+  border: 1px dashed #333;
+  color: #666;
   font-size: 0.8rem;
-  width: 100%;
 }
 
 .small {
-  padding: 6px 12px;
-  font-size: 0.75rem;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  background: #333;
+  color: #ccc;
 }
 
-.add-alternative-btn {
-  background: #333333;
-  color: #ffffff;
-  margin-top: 8px;
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.remove-alt {
-  background: #1e1e1e;
-  color: #888888;
-  border: 1px solid #333333;
-}
-
-/* DESKTOP VIEW */
+/* RESPONSIVE */
 @media (min-width: 768px) {
   body {
-    padding: 30px;
+    padding: 40px;
   }
-  form {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #333333;
+  .button-group {
+    flex-direction: row;
+  }
+  #submitBtn {
+    flex: 3;
+  }
+  #deleteBtn {
+    flex: 1;
   }
 }
