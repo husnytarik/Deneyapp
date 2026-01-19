@@ -1,4 +1,4 @@
-/* ABSOLUTE NEUTRAL ANTHRACITE - NO COLORS */
+/* ABSOLUTE NEUTRAL ANTHRACITE - OPTIMIZED WIDTH */
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -6,88 +6,76 @@
 
 body {
   margin: 0;
-  padding: 12px;
+  padding: 10px; /* Mobilde kenar boşlukları azaltıldı */
   font-family:
     "Inter",
     system-ui,
     -apple-system,
     sans-serif;
-  background-color: #121212; /* Siyah */
-  color: #e2e8f0; /* Açık Gri */
+  background-color: #121212;
+  color: #e2e8f0;
   line-height: 1.4;
 }
 
 h1 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
   margin: 1rem 0;
   color: #ffffff;
 }
 
-h3 {
-  font-size: 0.85rem;
-  margin: 0.8rem 0 0.4rem 0;
-  color: #888888;
-  text-transform: uppercase;
-}
-
-/* FORM CONTAINER */
+/* FORM CONTAINER - GENİŞLİK AYARI */
 form {
-  max-width: 450px;
+  width: 100%; /* Mobilde tam genişlik */
+  max-width: 800px; /* Masaüstünde çok dar kalmaması için artırıldı */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* NEUTRAL INPUTS */
 label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: -6px;
-  color: #666666;
-  padding-left: 2px;
+  margin-top: 5px;
+  color: #888888;
 }
 
 input,
 textarea,
 select {
   width: 100%;
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 1px solid #333333; /* Koyu Gri Kenarlık */
-  background: #1e1e1e; /* Antrasit */
-  font-size: 0.85rem;
+  padding: 10px 12px; /* Daha rahat dokunuş için hafif artırıldı */
+  border-radius: 6px;
+  border: 1px solid #333333;
+  background: #1e1e1e;
+  font-size: 0.9rem;
   color: #ffffff;
   transition: border-color 0.2s;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #555555;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #ffffff; /* Beyaz Odak */
+  border-color: #ffffff;
 }
 
 textarea {
-  min-height: 50px;
+  min-height: 80px;
 }
 
 select[multiple] {
-  min-height: 80px;
+  min-height: 120px;
 }
 
 /* MATERIALS SECTION */
 .material-item {
   background: #1a1a1a;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #333333;
 }
 
@@ -96,66 +84,59 @@ select[multiple] {
   border: none;
   border-bottom: 1px solid #333333;
   border-radius: 0;
-  padding: 2px 0;
-  margin-bottom: 6px;
+  padding: 4px 0;
+  margin-bottom: 8px;
   background: transparent;
 }
 
 .alternatives {
-  margin-left: 6px;
-  padding-left: 10px;
+  margin-left: 8px;
+  padding-left: 12px;
   border-left: 1px solid #333333;
-}
-
-.alternatives strong {
-  font-size: 0.65rem;
-  color: #666666;
 }
 
 .alternative-item {
   display: flex;
-  gap: 4px;
-  margin-top: 4px;
+  gap: 6px;
+  margin-top: 6px;
 }
 
 /* BUTTONS - MONOCHROME */
 button {
   font-family: inherit;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: none;
 }
 
 button[type="submit"] {
-  background: #ffffff; /* Beyaz */
-  color: #000000; /* Siyah metin */
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-top: 8px;
-}
-
-button[type="submit"]:active {
-  background: #cccccc;
+  background: #ffffff;
+  color: #000000;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 15px;
+  width: 100%;
 }
 
 #addMaterialBtn {
   background: transparent;
   color: #ffffff;
-  padding: 6px;
-  border: 1px dashed #444444; /* Gri kesikli çizgi */
-  font-size: 0.75rem;
+  padding: 10px;
+  border: 1px dashed #444444;
+  font-size: 0.8rem;
+  width: 100%;
 }
 
 .small {
-  padding: 4px 8px;
-  font-size: 0.7rem;
+  padding: 6px 12px;
+  font-size: 0.75rem;
 }
 
 .add-alternative-btn {
-  background: #333333; /* Koyu Gri */
+  background: #333333;
   color: #ffffff;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .remove-alt {
@@ -164,18 +145,15 @@ button[type="submit"]:active {
   border: 1px solid #333333;
 }
 
-.remove-alt:hover {
-  background: #ffffff;
-  color: #000000;
-}
-
 /* DESKTOP VIEW */
 @media (min-width: 768px) {
+  body {
+    padding: 30px;
+  }
   form {
     background: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: none; /* Gölge kaldırıldı */
+    padding: 30px;
+    border-radius: 12px;
     border: 1px solid #333333;
   }
 }
