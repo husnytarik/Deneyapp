@@ -1,0 +1,66 @@
+export const categories = [
+  {
+    key: "fz",
+    label: "Fizik",
+    subCategories: [
+      { key: "kh", label: "Kuvvet ve Hareket" },
+      { key: "en", label: "Enerji" },
+      { key: "ke", label: "Kinetik Enerji" },
+      { key: "pe", label: "Potansiyel Enerji" },
+      { key: "sr", label: "Sürtünme" },
+      { key: "bs", label: "Basınç" },
+      { key: "el", label: "Elektrik" },
+      { key: "my", label: "Manyetizma" },
+      { key: "ik", label: "Işık" },
+      { key: "ss", label: "Ses" },
+      { key: "is", label: "Isı ve Sıcaklık" },
+    ],
+  },
+  {
+    key: "km",
+    label: "Kimya",
+    subCategories: [
+      { key: "mh", label: "Maddenin Halleri" },
+      { key: "fd", label: "Fiziksel Değişim" },
+      { key: "kd", label: "Kimyasal Değişim" },
+      { key: "kr", label: "Karışımlar" },
+      { key: "cz", label: "Çözeltiler" },
+      { key: "ab", label: "Asit – Baz" },
+      { key: "yg", label: "Yoğunluk" },
+      { key: "tp", label: "Tepkimeler" },
+    ],
+  },
+  {
+    key: "by",
+    label: "Biyoloji",
+    subCategories: [
+      { key: "hc", label: "Hücre" },
+      { key: "sm", label: "Sistemler" },
+      { key: "do", label: "Duyu Organları" },
+      { key: "ur", label: "Üreme" },
+      { key: "ek", label: "Ekosistem" },
+      { key: "cb", label: "Çevre Bilinci" },
+    ],
+  },
+  {
+    key: "du",
+    label: "Dünya ve Uzay",
+    subCategories: [
+      { key: "dy", label: "Dünya’nın Yapısı" },
+      { key: "da", label: "Doğal Afetler" },
+      { key: "ho", label: "Hava Olayları" },
+      { key: "gs", label: "Güneş Sistemi" },
+      { key: "uz", label: "Uzay" },
+    ],
+  },
+  {
+    key: "st",
+    label: "STEM / Mühendislik",
+    subCategories: [
+      { key: "mt", label: "Mühendislik Tasarımı" },
+      { key: "pc", label: "Problem Çözme" },
+      { key: "bm", label: "Basit Makineler" },
+      { key: "rb", label: "Robotik" },
+    ],
+  },
+];

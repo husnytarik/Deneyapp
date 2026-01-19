@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Deney Ekle</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Deney Girişi</h1>
+
+    <form id="experimentForm">
+      <input id="deneyAdi" placeholder="Deneyin Adı" required />
+      <input id="deneyId" placeholder="Deney ID" />
+
+      <label>Kategoriler</label>
+      <select id="kategoriSelect" multiple></select>
+
+      <label>Alt Kategoriler</label>
+      <select id="altKategoriSelect" multiple></select>
+
+      <textarea id="amac" placeholder="Amaç"></textarea>
+      <textarea id="kazanim" placeholder="Kazanım"></textarea>
+
+      <label>Süre</label>
+      <input id="sure" type="number" min="1" />
+
+      <label>Zorluk</label>
+      <select id="zorluk">
+        <option value="">Seçiniz</option>
+        <option value="kolay">Kolay</option>
+        <option value="orta">Orta</option>
+        <option value="zor">Zor</option>
+      </select>
+
+      <textarea id="ogretmeneNot" placeholder="Öğretmene Not"></textarea>
+      <textarea id="veliyeNot" placeholder="Veliye Not"></textarea>
+
+      <h3>Gerekli Malzemeler</h3>
+      <div id="materialsContainer"></div>
+      <button type="button" id="addMaterialBtn">+ Gerekli Malzeme Ekle</button>
+
+      <textarea
+        id="guvenlikUyarilari"
+        placeholder="Güvenlik Uyarıları"
+      ></textarea>
+      <textarea id="deneyinYapilisi" placeholder="Deneyin Yapılışı"></textarea>
+      <textarea id="gozlem" placeholder="Gözlem"></textarea>
+      <textarea id="notlar" placeholder="Notlar"></textarea>
+      <textarea id="sonuc" placeholder="Sonuç"></textarea>
+
+      <textarea
+        id="tartismaSorulari"
+        placeholder="Tartışma Soruları"
+      ></textarea>
+
+      <textarea
+        id="gunlukHayatlaBaglantisi"
+        placeholder="Günlük Hayatla Bağlantısı"
+      ></textarea>
+
+      <input id="gorsel" placeholder="Görsel URL" />
+      <input id="video" placeholder="Video URL" />
+
+      <button type="submit">Kaydet</button>
+    </form>
+
+    <script type="module" src="js/category-selector.js"></script>
+    <script type="module" src="js/materials.js"></script>
+    <script type="module" src="js/experiment-form.js"></script>
+  </body>
+</html>
